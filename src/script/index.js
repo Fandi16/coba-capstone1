@@ -10,7 +10,10 @@ const hamburgerButtonElement = document.querySelector('#hamburgerButton');
 const drawerElement = document.querySelector('#drawer');
 const mainElement = document.querySelector('#menu');
 
-const app = new App({
+const app = new App( {
+   button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#mainContent'),
 });
 
 
@@ -27,8 +30,8 @@ mainElement.addEventListener('click', (event) => {
 
 window.addEventListener('hashchange', () => {
   app.renderPage();
-} );
+});
 
 window.addEventListener('load', () => {
   app.renderPage();
-})
+});
